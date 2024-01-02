@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import ComponentA from "./components/components/ComponentA";
+// import Timer1 from "./Timer/Timer1";
+import Input from "./components/Hooks";
 
-function App() {
+class App extends React.Component {
+  constructor(){
+    super();
+
+    this.state={
+      run : false
+    }
+  }
+
+  handleStart= ()=>{
+  this.setState((prev)=>({run: !prev.run}))
+}
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <ComponentA /> */}
+    {/* <button onClick={this.handleMount}>{this.state.mount ? "UN-MOUNT":"MOUNT"}</button>
+    {this.state.mount ? <Timer1 /> : null } */}
+    {/* <Timer1 run={this.state.run}/>
+    <button onClick={this.handleStart}>{this.state.run ? "Stop":"Start"}</button> */}
+    <Input />
+    </>
   );
+  }
 }
 
 export default App;
