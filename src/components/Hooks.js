@@ -1,6 +1,6 @@
 import { useState, useRef , useEffect } from "react";
 import hookStyle from "./components/Hooks.module.css"
-import { db } from  "../Firebaseinit";
+import { db } from  "../FirebaseInit";
 import { collection, doc, setDoc, onSnapshot, deleteDoc } from "firebase/firestore"; 
 
 
